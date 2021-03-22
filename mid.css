@@ -37,6 +37,6 @@ button {
 }
 
 body {
-    background-image: url(https://upload.wikimedia.org/wikipedia/en/9/9a/Trollface_non-free.png);
+    background-color: cornflowerblue;
     scale: fit;
 }
