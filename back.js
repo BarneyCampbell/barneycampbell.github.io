@@ -1,6 +1,6 @@
 function findNum() {
     if(x % 2 == 0) {
-        x = x + 2;
+        x = x + 3;
 
     } else {
         x = x + 7;
