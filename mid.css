@@ -1,0 +1,42 @@
+h1 {
+    color:coral;
+    text-align: center;
+    background-color: aquamarine;
+}
+
+h3 {
+    color: chartreuse;text-align: center
+}
+
+button {
+    color:aquamarine;
+    background-color: coral;
+    width: 200px;
+    height: 200px;
+}
+
+#demo {
+    color:chartreuse;
+    top: 50%;
+}
+
+.container {
+    height: 500px;
+    position: relative;
+    border: 3px solid aqua;
+    background-color:deeppink;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+body {
+    background-image: url(https://upload.wikimedia.org/wikipedia/en/9/9a/Trollface_non-free.png);
+    scale: fit;
+}
