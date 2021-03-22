@@ -1,8 +1,10 @@
 function findNum() {
-    var x = parseInt(document.getElementById("demo").textContent);
-    for(var i = 1; i < 11; i++) {
-        x = x + 1;
-        document.getElementById("demo").innerHTML = x;
+    if(x % 2 == 0) {
+        x = x + 2;
+
+    } else {
+        x = x + 7;
     }
-    
+
+    document.getElementById("demo").innerHTML = x;
 }
