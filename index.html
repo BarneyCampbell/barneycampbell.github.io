@@ -1,8 +1,24 @@
 <!DOCTYPE html>
-<head>
-  <title>Barney Campbell</title>
-</head>
-<body>
-  <h1>Barney Campbell</h1>
-  <a href="./extra.php">Extras</a>
-</body>
+<html>
+    <head>
+        <title>Barney Campbell</title>
+        <link rel="stylesheet" href="index.css">
+        <script src="./index.js"></script>
+    </head>
+    <body>
+        <h1 class="title">Barney Campbell</h1>
+        <div class="page-flex">
+            <div class="card-container">
+                <button id="cardBack"><-</button>
+                <div class="card" id="extra">
+                    <a class="link" href="extra.html">My other page 1</a>
+                </div>
+                <div class="card hidden" id="secret"><a class="link" href="extra.html">My secret page 2</a></div>
+                <div class="embed-card flex hidden" id="top-secret">
+                    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/4ijUWjOHZ5VnUADcOsL1vS?utm_source=generator" width="95%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <button id="cardForward">-></button>
+            </div>
+        </div>
+    </body>
+</html>
