@@ -12,9 +12,7 @@ window.onload = () => {
     });
 
     shownCard = document.getElementById('extra');
-    hiddenCards = [document.getElementById('secret'), document.getElementById('top-secret')];
-
-
+    hiddenCards = [document.getElementById('racetrack'), document.getElementById('blog')];
 
     document.getElementById('cardForward').onclick = () => cardChange(true);
     document.getElementById('cardBack').onclick = () => cardChange(false);
