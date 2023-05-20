@@ -12,7 +12,7 @@ window.onload = () => {
     });
 
     shownCard = document.getElementById('extra');
-    hiddenCards = [document.getElementById('racetrack'), document.getElementById('blog')];
+    hiddenCards = [document.getElementById('racetrack'), document.getElementById('blog'), document.getElementById('github')];
 
     document.getElementById('cardForward').onclick = () => cardChange(true);
     document.getElementById('cardBack').onclick = () => cardChange(false);
