@@ -8,6 +8,9 @@ button {
 
 .title {
     text-align: center;
+    text-decoration: underline overline 2px black;
+    text-underline-offset: 15px;
+    font-weight: bolder;
 }
 
 .page-flex {
@@ -22,26 +25,14 @@ button {
     align-items: center;
 }
 
-.card-container {
-    width: 70%;
-    height: 80vh;
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
-    place-items: center;
-
-    border: 2px solid black;
-    border-radius: 15px;
-    background-color: var(--purple);
-}
-
 .card {
     width: 55%;
     height: 55%;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     margin: 15px;
     border-radius: 15px;
     text-align: center;
-    background-color: var(--blue);
+    background-color: var(--main);
     box-shadow: calc(-1 * (var(--mouse-x) - 0.5) * 40px) calc(-1 * (var(--mouse-y) - 0.5) * 40px);
     flex-direction: column;
 
