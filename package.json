@@ -1,0 +1,22 @@
+{
+  "name": "barneycampbell.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "elm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barneycampbell/barneycampbell.github.io.git"
+  },
+  "author": "barney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barneycampbell/barneycampbell.github.io/issues"
+  },
+  "homepage": "https://github.com/barneycampbell/barneycampbell.github.io#readme",
+  "devDependencies": {
+    "elm": "^0.19.1-6"
+  }
+}
