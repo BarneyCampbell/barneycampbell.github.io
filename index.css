@@ -1,0 +1,23 @@
+:root {
+    --background-colour: #3C3C3C;
+    --text-colour: #8B8B8B;
+}
+body {
+    background-color: var(--background-colour);
+    color: var(--text-colour);
+}
+
+.jumbotr {
+    padding: 10px;
+}
+
+.info-card {
+    /*width: 190px;*/
+    cursor: pointer;
+}
+
+@media (max-width: 430px) {
+    .jumbotr {
+        text-align: center;
+    }
+}
