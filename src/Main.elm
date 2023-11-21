@@ -49,18 +49,22 @@ update msg model =
 view : Model -> Html Msg
 view model =
     div [ class "" ] [ 
-        div [ class "container-fluid gx-5 row" ]
-            [ h1 [ class "display-1 col-lg-4 jumbotr" ] [ text "Barney Campbell" ]
-            , div [ class "col-lg-8 d-flex align-items-center" ] [ qualityHtml model.subtext ]
+        div [ class "container-fluid g-0 row w-100" ]
+            [ h1 [ class "display-1 col-lg-5 col-md-6 jumbotr" ] [ text "Barney Campbell" ]
+            , div [ class "sm-text-center col-lg-7 col-md-6 p-3 d-flex flex-column justify-content-center" ]
+                [ qualityHtml model.subtext
+                , p [ class "lead" ] [ text model.introduction ]
             ]
-        , div [ class "d-flex justify-content-center align-items-center container-fluid row" ] 
-            [ p [ class "lead" ] [ text model.introduction ]
-            , cardHelper "TimerTree" "A useful little app that allows you to generate a dependency tree of timers for complex cookery" Nothing TimerTree
-            , cardHelper "Racetrack" "My dissertation project where I programmed 'racetrack' and an algorithm to play the game" Nothing Racetrack
-        , div [ class "project-overview" ]
-            [ h2 [] [ text model.project.title ]
-            , p [] [ text model.project.content ]
-            , img [ src (withDefault "" model.project.img)] []
+        ]
+        , div [ class "container-fluid row justify-content-between" ] 
+            [ div [ class "col-lg-5 col-md-6 d-flex cards row justify-content-between gx-3" ]
+                [ cardHelper "TimerTree" "A useful little app that allows you to generate a dependency tree of timers for complex cookery" Nothing TimerTree
+                , cardHelper "Racetrack" "My dissertation project where I programmed 'racetrack' and an algorithm to play the game" Nothing Racetrack
+            ]
+            , div [ class "project-overview col-lg-7 col-md-5 d-flex flex-column" ]
+                [ h2 [] [ text model.project.title ]
+                , p [] [ text model.project.content ]
+                , img [ src (withDefault "" model.project.img)] []
             ]
         ]
     ]
@@ -68,12 +72,12 @@ view model =
 cardHelper : String -> String -> Maybe String -> Project -> Html Msg
 cardHelper title content image kind =
     case image of
-        Just url -> div [ class "card info-card col-sm-6 p-2 m-1", onClick (ShowProject kind) ]
+        Just url -> div [ class "card info-card col-sm-5 p-2 m-1", onClick (ShowProject kind) ]
                     [ img [ src url ] []
                     , h5 [] [ text title ]
                     , p [] [ text content ]
                     ]
-        Nothing  -> div [ class "card info-card col-sm-5 p-2 m-1", onClick (ShowProject kind) ]
+        Nothing  -> div [ class "card info-card col-sm-5 p-1 m-3", onClick (ShowProject kind) ]
                     [ h5 [] [ text title ]
                     , p [] [ text content ]]
 

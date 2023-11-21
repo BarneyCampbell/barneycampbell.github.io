@@ -5526,7 +5526,7 @@ var $author$project$Main$cardHelper = F4(
 				$elm$html$Html$div,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$class('card info-card col-sm-6 p-2 m-1'),
+						$elm$html$Html$Attributes$class('card info-card col-sm-5 p-2 m-1'),
 						$elm$html$Html$Events$onClick(
 						$author$project$Main$ShowProject(kind))
 					]),
@@ -5559,7 +5559,7 @@ var $author$project$Main$cardHelper = F4(
 				$elm$html$Html$div,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$class('card info-card col-sm-5 p-2 m-1'),
+						$elm$html$Html$Attributes$class('card info-card col-sm-5 p-1 m-3'),
 						$elm$html$Html$Events$onClick(
 						$author$project$Main$ShowProject(kind))
 					]),
@@ -5632,7 +5632,7 @@ var $author$project$Main$view = function (model) {
 				$elm$html$Html$div,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$class('container-fluid gx-5 row')
+						$elm$html$Html$Attributes$class('container-fluid g-0 row w-100')
 					]),
 				_List_fromArray(
 					[
@@ -5640,7 +5640,7 @@ var $author$project$Main$view = function (model) {
 						$elm$html$Html$h1,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$class('display-1 col-lg-4 jumbotr')
+								$elm$html$Html$Attributes$class('display-1 col-lg-5 col-md-6 jumbotr')
 							]),
 						_List_fromArray(
 							[
@@ -5650,38 +5650,47 @@ var $author$project$Main$view = function (model) {
 						$elm$html$Html$div,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$class('col-lg-8 d-flex align-items-center')
+								$elm$html$Html$Attributes$class('sm-text-center col-lg-7 col-md-6 p-3 d-flex flex-column justify-content-center')
 							]),
 						_List_fromArray(
 							[
-								$author$project$Main$qualityHtml(model.subtext)
+								$author$project$Main$qualityHtml(model.subtext),
+								A2(
+								$elm$html$Html$p,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$class('lead')
+									]),
+								_List_fromArray(
+									[
+										$elm$html$Html$text(model.introduction)
+									]))
 							]))
 					])),
 				A2(
 				$elm$html$Html$div,
 				_List_fromArray(
 					[
-						$elm$html$Html$Attributes$class('d-flex justify-content-center align-items-center container-fluid row')
+						$elm$html$Html$Attributes$class('container-fluid row justify-content-between')
 					]),
 				_List_fromArray(
 					[
 						A2(
-						$elm$html$Html$p,
+						$elm$html$Html$div,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$class('lead')
+								$elm$html$Html$Attributes$class('col-lg-5 col-md-6 d-flex cards row justify-content-between gx-3')
 							]),
 						_List_fromArray(
 							[
-								$elm$html$Html$text(model.introduction)
+								A4($author$project$Main$cardHelper, 'TimerTree', 'A useful little app that allows you to generate a dependency tree of timers for complex cookery', $elm$core$Maybe$Nothing, $author$project$Main$TimerTree),
+								A4($author$project$Main$cardHelper, 'Racetrack', 'My dissertation project where I programmed \'racetrack\' and an algorithm to play the game', $elm$core$Maybe$Nothing, $author$project$Main$Racetrack)
 							])),
-						A4($author$project$Main$cardHelper, 'TimerTree', 'A useful little app that allows you to generate a dependency tree of timers for complex cookery', $elm$core$Maybe$Nothing, $author$project$Main$TimerTree),
-						A4($author$project$Main$cardHelper, 'Racetrack', 'My dissertation project where I programmed \'racetrack\' and an algorithm to play the game', $elm$core$Maybe$Nothing, $author$project$Main$Racetrack),
 						A2(
 						$elm$html$Html$div,
 						_List_fromArray(
 							[
-								$elm$html$Html$Attributes$class('project-overview')
+								$elm$html$Html$Attributes$class('project-overview col-lg-7 col-md-5 d-flex flex-column')
 							]),
 						_List_fromArray(
 							[
