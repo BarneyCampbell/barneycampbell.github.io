@@ -6,6 +6,9 @@ import Html.Attributes exposing (class, src)
 import Html.Events exposing (onClick)
 import Random exposing (Generator)
 import Maybe exposing (withDefault)
+import Html exposing (a)
+import Html.Attributes exposing (href)
+import Html.Attributes exposing (target)
 
 type Msg = Loading | Display Quality | ShowProject Project
 type alias Model = {
@@ -22,6 +25,7 @@ type alias Quality = {
 type alias ProjectContent = {
         title: String,
         content: String,
+        link: Maybe (Html Msg),
         img: Maybe String
     }
 
@@ -37,7 +41,7 @@ main =
         }
 
 init : flags -> (Model, Cmd Msg)
-init _ = (Model "Give me a break I'm thinking!" (Quality "" "") (ProjectContent "" "" Nothing), Cmd.batch [ Random.generate Display qualityGenerator ])
+init _ = (Model "Give me a break I'm thinking!" (Quality "" "") (ProjectContent "" "" Nothing Nothing), Cmd.batch [ Random.generate Display qualityGenerator ])
 
 update : Msg -> Model -> (Model, Cmd Msg)
 update msg model = 
@@ -56,14 +60,14 @@ view model =
                 , p [ class "lead" ] [ text model.introduction ]
             ]
         ]
-        , div [ class "container-fluid row justify-content-between" ] 
+        , div [ class "container-fluid row" ] 
             [ div [ class "col-lg-5 col-md-6 d-flex cards row justify-content-between gx-3" ]
                 [ cardHelper "TimerTree" "A useful little app that allows you to generate a dependency tree of timers for complex cookery" Nothing TimerTree
                 , cardHelper "Racetrack" "My dissertation project where I programmed 'racetrack' and an algorithm to play the game" Nothing Racetrack
             ]
-            , div [ class "project-overview col-lg-7 col-md-5 d-flex flex-column" ]
+            , div [ class "project-overview col-lg-7 col-md-5 d-flex flex-column ps-4" ]
                 [ h2 [] [ text model.project.title ]
-                , p [] [ text model.project.content ]
+                , p [] [ text model.project.content, maybeLink model.project.link ]
                 , img [ src (withDefault "" model.project.img)] []
             ]
         ]
@@ -84,9 +88,13 @@ cardHelper title content image kind =
 projectEnumerator : Project -> ProjectContent
 projectEnumerator proj = 
     case proj of
-        Racetrack -> ProjectContent "Racetrack" "A game" Nothing
-        TimerTree -> ProjectContent "TimerTree" "A timer app" Nothing
+        Racetrack -> ProjectContent "Racetrack" "A mathematical game in which a player moves a 'car' around a race track defined in a grid. Each turn players choose to move their car to one of 9 new positions which are calculated by applying the current speed of the car to the car's current position. " (Just (a [ href "https://racetrack-94772.web.app", target "_blank" ] [ text "Try it out!" ])) Nothing
+        TimerTree -> ProjectContent "TimerTree" "A timer app that allows you to define complex trees of dependent steps for recipes. The goal is to allow the steps to be entered and then the user informed when each step should start for it to end on time. It is still currently being developed so is currently rough around the edges but the concept is there. " (Just (a [ href "https://timer-tree.web.app", target "_blank" ] [ text "Have a look" ])) Nothing
         
+maybeLink : Maybe (Html Msg) -> Html Msg
+maybeLink link = case link of
+    Just a  -> a
+    Nothing -> text ""
 
 qualityGenerator : Generator Quality
 qualityGenerator = Random.map getQuality ( Random.int 0 3 )
