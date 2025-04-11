@@ -7,31 +7,95 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <style>
-      body {
-        background-color: #474747;
+      :root {
+        --background-colour: #474747;
+        --background-colour-2: #3a3a3a;
+        --primary-colour: #E8C492;
+        --secondary-colour: #5F9CA2;
+        --text-colour: #D6D6D6;
       }
 
-      #root {
+      body {
+        background-color: var(--background-colour);
+      }
+
+      .root {
         width: 100%;
-        min-height: 85vh;
         display: flex;
         align-items: center;
-        justify-content: center;
+        flex-direction: column;
       }
 
       .title {
-        color: #e8c492;
+        color: var(--primary-colour);
         font-family: "Special Gothic Expanded One", sans-serif;
         font-weight: 400;
         font-style: normal;
+      }
+
+      .text {
+        color: var(--text-colour);
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        font-size: large;
+      }
+
+      .content {
+        width: 100%;
+      }
+
+      .highlight {
+        border-radius: 5px;
+        border: 2px solid var(--secondary-colour);
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: var(--background-colour-2);
+        color: var(--primary-colour);
+        font-family: "Special Gothic Expanded One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .paragraph-divider {
+        color: var(--secondary-colour);
+      }
+
+      @media (min-width: 600px) {
+        .content {
+          width: 70%;
+          margin: 10px;
+        }
       }
     </style>
     <title>Barney Campbell</title>
   </head>
   <body>
-    <div id="root">
+    <div class="root">
       <h1 class="title">Under Construction</h1>
+      <div class="content">
+        <div class="text">
+          Lorem ipsum dolor sit amet. Qui amet totam ex eaque nulla quo dolorum atque aut dolorum vero aut dolorem assumenda eos accusamus necessitatibus ea animi galisum. Hic quam Quis eos corrupti galisum sed perspiciatis reiciendis ut galisum Quis ut reiciendis velit vel iusto harum. 
+        </div>
+        <hr class="paragraph-divider">
+        <h3 class="title">Section</h3>
+        <div class="text">
+          Lorem ipsum dolor sit amet. Qui amet totam ex eaque nulla quo dolorum atque aut dolorum vero aut dolorem assumenda eos accusamus necessitatibus ea animi galisum. Hic quam Quis eos corrupti galisum sed perspiciatis reiciendis ut galisum Quis ut reiciendis velit vel iusto harum. 
+        </div>
+        <div class="highlight">
+          Lorem ipsum dolor sit amet. Qui amet totam ex eaque nulla quo dolorum atque aut dolorum vero aut dolorem assumenda eos accusamus necessitatibus ea animi galisum.
+        </div>
+        <div class="text">
+          Lorem ipsum dolor sit amet. Qui amet totam ex eaque nulla quo dolorum atque aut dolorum vero aut dolorem assumenda eos accusamus necessitatibus ea animi galisum. Hic quam Quis eos corrupti galisum sed perspiciatis reiciendis ut galisum Quis ut reiciendis velit vel iusto harum. 
+        </div>
+      </div>
     </div>
   </body>
 </html>
