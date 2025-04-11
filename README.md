@@ -1,3 +1,3 @@
 # barneycampbell.github.io
 
-My personal portfolio website. Currently written using functional language Elm.
+My personal portfolio website. Will be built using AWS lambdas.
