@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/PostView-BBaY8t7Q.js","assets/PostView-B_s5-Cn5.css","assets/PostsView-qIbp_xDQ.js","assets/PostsView-DRhEw9bm.css"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/PostView-BrdcEJIo.js","assets/PostView-B_s5-Cn5.css","assets/PostsView-JEsdIqcU.js","assets/PostsView-DRhEw9bm.css"])))=>i.map(i=>d[i]);
 var __typeError = (msg) => {
   throw TypeError(msg);
 };
@@ -7658,8 +7658,8 @@ let __tla = (async () => {
       "data-v-2b1545fb"
     ]
   ]);
-  wd = "https://5c3haimzn6n2fdzpjyvqjmpj4q0xksxh.lambda-url.eu-west-2.on.aws/";
-  _d = "https://sancnux7ibtpg5xlh5drugxlyi0gpzqo.lambda-url.eu-west-2.on.aws/?post=";
+  wd = "https://7znchg6kg5e5nipu7yswgsjq3i0oxwta.lambda-url.eu-west-2.on.aws/";
+  _d = "https://qzpxelwctchmjcpbu56sl5gvt40tukrt.lambda-url.eu-west-2.on.aws/?post=";
   xd = async function(e) {
     return new Promise((t, s) => {
       let n = wd;
@@ -9589,7 +9589,7 @@ let __tla = (async () => {
       {
         path: "/posts/post/:id",
         name: "post",
-        component: () => Cn(() => import("./PostView-BBaY8t7Q.js").then(async (m) => {
+        component: () => Cn(() => import("./PostView-BrdcEJIo.js").then(async (m) => {
           await m.__tla;
           return m;
         }), __vite__mapDeps([0,1])),
@@ -9598,12 +9598,12 @@ let __tla = (async () => {
       {
         path: "/posts",
         name: "posts",
-        component: () => Cn(() => import("./PostsView-qIbp_xDQ.js"), __vite__mapDeps([2,3]))
+        component: () => Cn(() => import("./PostsView-JEsdIqcU.js"), __vite__mapDeps([2,3]))
       },
       {
         path: "/about",
         name: "about",
-        component: () => Cn(() => import("./AboutView-DrJvv_Bh.js"), [])
+        component: () => Cn(() => import("./AboutView-CTIjN_SO.js"), [])
       },
       {
         path: "/:pathMatch(.*)*",
